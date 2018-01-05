@@ -16,14 +16,16 @@ build:
     - python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
-    - toolchain
+  host:
     - python
     - cython >=0.25
     - numpy 1.11.*
     - mako
     - setuptools
     - libgpuarray =={{ version }}
+
+  build:
+    - {{ compiler('c') }}
 
   run:
     - python
