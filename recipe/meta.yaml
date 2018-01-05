@@ -19,7 +19,7 @@ requirements:
   host:
     - python
     - cython >=0.25
-    - numpy 1.11.*
+    - numpy
     - mako
     - setuptools
     - libgpuarray =={{ version }}
@@ -29,7 +29,7 @@ requirements:
 
   run:
     - python
-    - numpy >=1.11
+    - {{ pin_compatible('numpy') }}
     - mako
     - six
     - libgpuarray =={{ version }}
